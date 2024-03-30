@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.static('uploads'))
 
 app.get("/", (req, res, next) => {
-    res.status(200).send(<h1>Bienvenido a mi API</h1>)
+    res.status(200).send("<h1>Bienvenido a mi API</h1>")
     next()
 })
 
