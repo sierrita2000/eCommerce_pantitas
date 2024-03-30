@@ -9,6 +9,12 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(express.static('uploads'))
+
+app.get("/", (req, res, next) => {
+    res.status(200).send(<h1>Bienvenido a mi API</h1>)
+    next()
+})
+
 app.use(router)
 app.use(errores)
 
